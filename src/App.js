@@ -7,6 +7,7 @@ export default function App() {
       <h1>First push: "Islam lox"</h1>
       <h1>First push: "Islam lox"</h1>
       <h1>First push: "Islam lox"</h1>
+      <h1>Sam takoi</h1>
       <h1>First push: "Islam lox"</h1>
     </div>
   );
