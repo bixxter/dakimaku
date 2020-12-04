@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Categories from './components/Categories';
+import About from './components/About';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-          <div>
-            <h1>First push: "Islam lox"</h1>
-            <h1>First push: "Asad pidar"</h1>
-          </div>
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route path="/categories" component={Categories} />
+        <Route path="/about" component={About} />
       </Switch>
     </BrowserRouter>
   );
