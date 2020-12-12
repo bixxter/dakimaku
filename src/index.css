@@ -12,9 +12,6 @@ body {
 .dokiColor {
   background: var(--purple);
 }
-.navbar {
-  background-color: var(--purple);
-}
 .headerMain {
   width: 100%;
   background: url(./img/main_header.jpg) no-repeat;
@@ -43,4 +40,17 @@ body {
   font-size: 2rem;
   background: var(--purple);
   color: #fff;
+}
+.centr{
+  margin: 10vh auto;
+  padding: 1em;
+  max-width: 90vw;
+}
+.centr2{
+  margin: 20vh auto;
+  padding: 2em;
+  max-width: 90vw;
+}
+.centr3{
+  margin: 20vh auto;
 }

@@ -10,8 +10,13 @@ function ProjectDetails(props) {
       <div className="container section project-details">
         <div className="card z-depth-0">
           <div className="card-content">
+            <div className="card-image">
+              <img src={project.images[0]} alt=""/>
+            </div>
             <span className="card-title">{project.title}</span>
-            <p>{project.content}</p>
+            <a href={project.source_url} target="_blank" >{project.source}</a>
+            <p>{project.price}</p>
+            {project.size}
           </div>
           <div className="card-action grey lighten-4 grey-text">
             <div>2nd September</div>
@@ -21,8 +26,8 @@ function ProjectDetails(props) {
     );
   } else {
     return (
-      <div className="container center progress">
-        <div class="indeterminate">
+      <div className="container center progress centr">
+        <div className="indeterminate">
           <p>Loading project...</p>
         </div>
       </div>

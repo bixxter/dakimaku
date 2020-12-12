@@ -10,6 +10,7 @@ import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
 import AboutUs from './components/about/AboutUs';
 import Wishes from './components/Baskets/Wishes';
+import UserProfile from './components/auth/UserProfile';
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/wishes" component={Wishes} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
+          <Route path="/profile" component={UserProfile} />
         </Switch>
         <Footer />
       </BrowserRouter>
