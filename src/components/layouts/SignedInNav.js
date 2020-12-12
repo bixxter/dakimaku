@@ -15,7 +15,7 @@ const SignedInNav = () => {
         </NavLink>
       </li>
       <li className="icons">
-        <NavLink to="/">
+        <NavLink exact to="/wishes">
           <img src={wishlistIcon} alt="" />
         </NavLink>
       </li>

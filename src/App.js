@@ -8,6 +8,8 @@ import SignUp from './components/auth/SignUp';
 import ProjectCreate from './components/projects/ProjectCreate';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
+import AboutUs from './components/about/AboutUs';
+import Wishes from './components/Baskets/Wishes';
 
 class App extends Component {
   render() {
@@ -19,6 +21,8 @@ class App extends Component {
           <Route exact path="/" component={Dashboard} />
           <Route path="/project/:id" component={ProjectDetails} />
           <Route path="/create" component={ProjectCreate} />
+          <Route path="/about" component={AboutUs} />
+          <Route path="/wishes" component={Wishes} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
         </Switch>

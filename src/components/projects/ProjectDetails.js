@@ -21,8 +21,10 @@ function ProjectDetails(props) {
     );
   } else {
     return (
-      <div className="container center">
-        <p>Loading project...</p>
+      <div className="container center progress">
+        <div class="indeterminate">
+          <p>Loading project...</p>
+        </div>
       </div>
     );
   }

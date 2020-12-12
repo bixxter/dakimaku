@@ -30,3 +30,17 @@ body {
 .page-footer {
   background: var(--purple);
 }
+.aboutUs img {
+  width: 100%;
+  margin: auto;
+}
+.basketTable {
+  border: 0.2rem solid var(--purple);
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.tableTitle {
+  font-size: 2rem;
+  background: var(--purple);
+  color: #fff;
+}

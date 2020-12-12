@@ -12,14 +12,16 @@ const Nav = () => {
         Dakimaku
       </Link>
       <Search />
-      {/* <SignedInNav /> */}
-      <SignedOutNav />
+      <SignedInNav />
+      {/* <SignedOutNav /> */}
       <ul className="right">
         <li>
           <Link to="/">Categories</Link>
         </li>
         <li>
-          <Link to="/">About Us</Link>
+          <Link exact to="/about">
+            About Us
+          </Link>
         </li>
         <li>
           <Link to="/">Language</Link>
