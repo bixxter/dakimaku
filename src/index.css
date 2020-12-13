@@ -92,6 +92,10 @@ main {
 .centr3 {
   margin: 20vh auto;
 }
+.centr4 {
+  display: flex;
+  justify-content: center;
+}
 .dokiBlock {
   padding: 2rem;
   border-radius: 5px;
@@ -115,6 +119,46 @@ main {
 .textContent img {
   border-radius: 5px;
 }
+.card-action {
+  padding: 0;
+}
+.white {
+  padding: 2rem;
+}
+.projectDetails .card-content {
+  font-size: 1rem;
+}
+.searchInput {
+  position: relative;
+}
+
+.searchResult {
+  position: absolute;
+  margin: 0;
+}
+.cards1 {
+  column-gap: 1rem;
+  column-width: 300px;
+  min-height: 100%;
+  padding: 0 1rem;
+}
+.card1 {
+  display: inline-block;
+  height: 100%;
+}
+@media screen and (max-width: 750px) {
+  .cards1 {
+    column-gap: 0px;
+  }
+  .cards1 div {
+    width: 100%;
+  }
+}
+/* .card1 {
+  -webkit-column-break-inside: avoid;
+  column-break-inside: avoid;
+  height: auto;
+} */
 /* .mapouter {
   border: 2px solid var(--purple);
 } */

@@ -3,42 +3,47 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {applyMiddleware, createStore, compose} from 'redux';
+import { applyMiddleware, createStore, compose } from 'redux';
 import rootReducer from './store/reducers/rootReducer';
-import {Provider,useSelector} from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import thunk from 'redux-thunk';
-import {reduxFirestore, getFirestore, createFirestoreInstance} from 'redux-firestore';
-import {ReactReduxFirebaseProvider, getFirebase, isLoaded} from 'react-redux-firebase';
+import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-firestore';
+import { ReactReduxFirebaseProvider, getFirebase, isLoaded } from 'react-redux-firebase';
 import fbConfig from './config/fbConfig';
-import firebase from "firebase/app";
+import firebase from 'firebase/app';
 
-const store = createStore(rootReducer, 
+const store = createStore(
+  rootReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirestore, getFirebase })),
-    reduxFirestore(fbConfig)
-  ));
+    reduxFirestore(fbConfig),
+  ),
+);
 
 const profileSpecificProps = {
   userProfile: 'users',
   useFirestoreForProfile: true,
-}
+};
 
 const rrfProps = {
   firebase,
   config: fbConfig,
   config: profileSpecificProps,
   dispatch: store.dispatch,
-  createFirestoreInstance
+  createFirestoreInstance,
 };
 
 function AuthIsLoaded({ children }) {
+  const auth = useSelector((state) => state.firebase.auth);
 
-  const auth = useSelector(state => state.firebase.auth)
+  if (!isLoaded(auth))
+    return (
+      <div className="progress centr2">
+        <div className="indeterminate"></div>
+      </div>
+    );
 
-  if (!isLoaded(auth)) return <div className="progress centr2"><div className="indeterminate"></div></div>;
-
-  return children
-
+  return children;
 }
 
 ReactDOM.render(
@@ -51,7 +56,7 @@ ReactDOM.render(
       </ReactReduxFirebaseProvider>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function

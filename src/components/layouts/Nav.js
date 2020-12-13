@@ -26,7 +26,7 @@ const Nav = (props) => {
                 <Search />
               </li>
               <li>
-                <NavLink to="/categories">Categories</NavLink>
+                <NavLink to="/dashboard">Categories</NavLink>
               </li>
               {links}
             </ul>
@@ -42,12 +42,9 @@ const Nav = (props) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/categories">Categories</NavLink>
+          <NavLink to="/dashboard">Categories</NavLink>
         </li>
         {links}
-        <li>
-          <NavLink to="/">Language</NavLink>
-        </li>
       </ul>
     </>
   );

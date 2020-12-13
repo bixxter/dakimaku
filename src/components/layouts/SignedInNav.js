@@ -9,7 +9,7 @@ const SignedInNav = (props) => {
   return (
     <>
       <li>
-        <NavLink to="/">
+        <NavLink to="/cart">
           <i class="material-icons">add_shopping_cart</i>
         </NavLink>
       </li>

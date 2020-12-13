@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ProjectList = ({ projects }) => {
   if (projects) {
     return (
-      <div className="row">
+      <div className="cards1 row">
         {projects.map((project) => {
           return (
             <Link to={'/project/' + project.id} key={project.id}>
@@ -17,16 +17,18 @@ const ProjectList = ({ projects }) => {
     );
   } else {
     return (
-      <div className="preloader-wrapper big active centr3">
-        <div className="spinner-layer spinner-blue-only">
-          <div className="circle-clipper left">
-            <div className="circle"></div>
-          </div>
-          <div className="gap-patch">
-            <div className="circle"></div>
-          </div>
-          <div className="circle-clipper right">
-            <div className="circle"></div>
+      <div className="centr4">
+        <div className="preloader-wrapper big active">
+          <div className="spinner-layer spinner-blue-only ">
+            <div className="circle-clipper left">
+              <div className="circle"></div>
+            </div>
+            <div className="gap-patch">
+              <div className="circle"></div>
+            </div>
+            <div className="circle-clipper right">
+              <div className="circle"></div>
+            </div>
           </div>
         </div>
       </div>

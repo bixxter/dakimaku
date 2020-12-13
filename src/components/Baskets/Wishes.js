@@ -8,7 +8,7 @@ class Wishes extends Component {
     console.log(profile);
     return (
       <div className="container">
-        <h1>Your wishes</h1>
+        <h1 className="dokiFont">Your wishes</h1>
         <table className="basketTable">
           <thead className="tableTitle">
             <tr>
