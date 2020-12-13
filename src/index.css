@@ -8,7 +8,14 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
+main {
+  flex: 1 0 auto;
+}
+
 .dokiColor {
   background: var(--purple);
 }
@@ -41,16 +48,33 @@ body {
   background: var(--purple);
   color: #fff;
 }
-.centr{
+.profileCard {
+  width: 50vw;
+  margin: 2rem auto;
+}
+.centr {
   margin: 10vh auto;
   padding: 1em;
   max-width: 90vw;
 }
-.centr2{
+.centr2 {
   margin: 20vh auto;
   padding: 2em;
   max-width: 90vw;
 }
-.centr3{
+.centr3 {
   margin: 20vh auto;
+}
+.projectList {
+  display: flex;
+  justify-content: space-around;
+}
+.pillows {
+  width: 40%;
+  align-content: stretch;
+}
+.mainSlider {
+  padding: 2rem;
+  border: 2px solid var(--purple);
+  margin: 2rem 0;
 }

@@ -14,24 +14,42 @@ const Nav = (props) => {
     <>
       <nav className="nav-wrapper dokiColor">
         <div className="container">
-          <NavLink to="/" className="brand-logo">Dakimaku</NavLink>
-          <a href="#" data-target="slide-out" className="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <NavLink to="/" className="brand-logo">
+            Dakimaku
+          </NavLink>
+          <a href="#" data-target="slide-out" className="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
           <div className="hide-on-med-and-down">
             <ul className="right">
-              <li><NavLink to="/categories">Categories</NavLink></li>
+              <li>
+                <NavLink to="/categories">Categories</NavLink>
+              </li>
               {links}
-              <li><NavLink to="/">Language</NavLink></li>
-              <li><Search /></li>
+              <li>
+                <NavLink to="/">Language</NavLink>
+              </li>
+              <li>
+                <Search />
+              </li>
             </ul>
           </div>
         </div>
       </nav>
       <ul id="slide-out" class="sidenav">
         <li>{userMobile}</li>
-        <li><NavLink to="/" className="brand-logo">Dakimaku</NavLink></li>
-        <li><NavLink to="/categories">Categories</NavLink></li>
+        <li>
+          <NavLink to="/" className="brand-logo">
+            Dakimaku
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/categories">Categories</NavLink>
+        </li>
         {links}
-        <li><NavLink to="/">Language</NavLink></li>
+        <li>
+          <NavLink to="/">Language</NavLink>
+        </li>
       </ul>
     </>
   );
@@ -40,8 +58,8 @@ const Nav = (props) => {
 const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
-    profile: state.firebase.profile
-  }
-}
+    profile: state.firebase.profile,
+  };
+};
 
-export default connect(mapStateToProps)(Nav)
+export default connect(mapStateToProps)(Nav);
