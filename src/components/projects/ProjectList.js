@@ -6,15 +6,13 @@ const ProjectList = ({ projects }) => {
   if (projects) {
     return (
       <div className="row">
-        <div className="projectList col s12">
-          {projects.map((project) => {
-            return (
-              <Link to={'/project/' + project.id} key={project.id}>
-                <ProjectSummary project={project} />
-              </Link>
-            );
-          })}
-        </div>
+        {projects.map((project) => {
+          return (
+            <Link to={'/project/' + project.id} key={project.id}>
+              <ProjectSummary project={project} />
+            </Link>
+          );
+        })}
       </div>
     );
   } else {

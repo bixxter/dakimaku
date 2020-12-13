@@ -65,14 +65,6 @@ main {
 .centr3 {
   margin: 20vh auto;
 }
-.projectList {
-  display: flex;
-  justify-content: space-around;
-}
-.pillows {
-  width: 40%;
-  align-content: stretch;
-}
 .mainSlider {
   padding: 2rem;
   border: 2px solid var(--purple);

@@ -9,19 +9,26 @@ class ProjectSummary extends Component {
   render() {
     const { project } = this.props;
     return (
-      <div className="card z-depth-0 pillows">
-        <div className="card-content grey-text text-darken-3 z-depth-1 ">
+      <div class="col s12 m4 l3">
+        <div className="card">
           <div className="card-image">
             <img src={project.images[0]} alt={project.source} />
-            <a
-              className="btn-floating halfway-fab waves-effect waves-light red"
-              onClick={() => this.props.addToWishList(this.state)}>
-              <i class="material-icons">add</i>
-            </a>
           </div>
-          <span className="card-title">{project.title}</span>
-          <p>{project.price}</p>
-          <p className="grey-text">3rd</p>
+          <div className="card-content grey-text text-darken-3">
+            <span className="card-title">{project.title}</span>
+            <p>{project.price}</p>
+            <a
+              className="btn dokiColor halfway-fab waves-effect waves-light "
+              onClick={() => this.props.addToWishList(this.state)}>
+              <i class="material-icons">add_shopping_cart</i>
+            </a>
+            <a
+              className="btn halfway-fab waves-effect waves-light red right"
+              onClick={() => this.props.addToWishList(this.state)}>
+              <i class="material-icons">favorite</i>
+            </a>
+            <p className="grey-text">3rd</p>
+          </div>
         </div>
       </div>
     );
