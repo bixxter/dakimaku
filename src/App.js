@@ -12,8 +12,13 @@ import AboutUs from './components/about/AboutUs';
 import Wishes from './components/baskets/Wishes';
 import UserProfile from './components/auth/UserProfile';
 import MainPage from './components/main/MainPage';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 class App extends Component {
+  componentDidMount() {
+    let sidenav = document.querySelector('#slide-out');
+    M.Sidenav.init(sidenav, {});
+  }
   render() {
     return (
       <BrowserRouter>

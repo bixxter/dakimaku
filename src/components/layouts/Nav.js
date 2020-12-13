@@ -12,9 +12,9 @@ const Nav = (props) => {
   const userMobile = auth.uid ? <Profile profile={profile} /> : null;
   return (
     <>
-      <nav className="nav-wrapper dokiColor">
-        <div className="container">
-          <NavLink to="/" className="brand-logo">
+      <nav className="dokiColor">
+        <div className="nav-wrapper navMenu">
+          <NavLink to="/" className="brand-logo dokiFont">
             Dakimaku
           </NavLink>
           <a href="#" data-target="slide-out" className="sidenav-trigger">
@@ -23,19 +23,17 @@ const Nav = (props) => {
           <div className="hide-on-med-and-down">
             <ul className="right">
               <li>
+                <Search />
+              </li>
+              <li>
                 <NavLink to="/categories">Categories</NavLink>
               </li>
               {links}
-              <li>
-                <NavLink to="/">Language</NavLink>
-              </li>
-              <li>
-                <Search />
-              </li>
             </ul>
           </div>
         </div>
       </nav>
+
       <ul id="slide-out" class="sidenav">
         <li>{userMobile}</li>
         <li>

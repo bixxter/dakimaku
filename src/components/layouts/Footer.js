@@ -7,7 +7,7 @@ export default class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col l6 s12">
-              <h5 className="white-text">Dokimaku</h5>
+              <h5 className="white-text dokiFont">Dokimaku</h5>
               <p className="grey-text text-lighten-4">
                 Here you can find more information about us.
               </p>

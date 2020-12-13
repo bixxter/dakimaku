@@ -25,7 +25,7 @@ export default class AutoPlay extends Component {
       cssEase: 'linear',
     };
     return (
-      <div className="mainSlider">
+      <div className="dokiBlock z-depth-1">
         <h2>Choose your first Dakimakura!</h2>
         <Slider {...settings}>
           {this.state.images.map((img) => {
