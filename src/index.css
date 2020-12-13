@@ -70,3 +70,6 @@ main {
   border: 2px solid var(--purple);
   margin: 2rem 0;
 }
+.card-action{
+  padding: 0;
+}

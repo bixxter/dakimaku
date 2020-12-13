@@ -41,6 +41,18 @@ const authReducer = (state = initState, action) => {
                 ...state,
                 authError: action.err.message
             }
+        case 'ADD_CARTLIST':
+            console.log('added to wishlist')
+            return {
+                ...state,
+                authError: null
+            }
+        case 'ADD_CARTLIST_ERROR':
+            console.log('add to wishlist error')
+            return {
+                ...state,
+                authError: action.err.message
+            }
         default:
             return state;
     }

@@ -62,6 +62,23 @@ export const addToWishList = (newWish) => {
     }
 
 }
+export const addToCartList = (newCart) => {
+    return (dispatch, getState, {getFirebase, getFirestore}) => {
+        const firebase = getFirebase();
+        const firestore = getFirestore();
+
+        var user = firebase.auth().currentUser;
+
+        firestore.collection('users').doc(user.uid).update({
+            cartList: firebase.firestore.FieldValue.arrayUnion(newCart)
+        }).then(()=>{
+            dispatch({type: 'ADD_WISHLIST_SUCCESS'})
+        }).catch(err => {
+            dispatch({type: 'ADD_WISHLIST_ERROR', err})
+        })
+    }
+
+}
 export const removeFromWishList = (oldWish) => {
     return (dispatch, getState, {getFirebase, getFirestore}) => {
         const firebase = getFirebase();
@@ -75,6 +92,23 @@ export const removeFromWishList = (oldWish) => {
             dispatch({type: 'REMOVE_FROM_WISHLIST_SUCCESS'})
         }).catch(err => {
             dispatch({type: 'REMOVE_FROM_WISHLIST_ERROR', err})
+        })
+    }
+
+}
+export const removeFromCartList = (oldCart) => {
+    return (dispatch, getState, {getFirebase, getFirestore}) => {
+        const firebase = getFirebase();
+        const firestore = getFirestore();
+
+        var user = firebase.auth().currentUser;
+
+        firestore.collection('users').doc(user.uid).update({
+            cartList: firebase.firestore.FieldValue.arrayRemove(oldCart)
+        }).then(()=>{
+            dispatch({type: 'REMOVE_FROM_CARTLIST_SUCCESS'})
+        }).catch(err => {
+            dispatch({type: 'REMOVE_FROM_CARTLIST_ERROR', err})
         })
     }
 

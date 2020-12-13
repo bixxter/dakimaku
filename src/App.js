@@ -10,6 +10,7 @@ import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
 import AboutUs from './components/about/AboutUs';
 import Wishes from './components/baskets/Wishes';
+import Cart from './components/baskets/Cart';
 import UserProfile from './components/auth/UserProfile';
 import MainPage from './components/main/MainPage';
 
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path="/create" component={ProjectCreate} />
             <Route path="/about" component={AboutUs} />
             <Route path="/wishes" component={Wishes} />
+            <Route path="/cart" component={Cart} />
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
             <Route path="/profile" component={UserProfile} />

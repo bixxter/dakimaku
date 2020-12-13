@@ -10,7 +10,7 @@ const SignedInNav = (props) => {
     <>
       <li><NavLink to="/create">New Pillow</NavLink></li>
       <li><a onClick={props.signOut}>Log Out</a></li>
-      <li className="icons"><NavLink to="/"><img src={cartIcon} alt="" /></NavLink></li>
+      <li className="icons"><NavLink to="/cart"><img src={cartIcon} alt="" /></NavLink></li>
       <li className="icons"><NavLink exact to="/wishes"><img src={wishlistIcon} alt="" /></NavLink></li>
       <li><NavLink to="/profile">Profile</NavLink></li>
     </>
