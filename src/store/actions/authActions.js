@@ -44,6 +44,7 @@ export const signUp = (newUser) => {
             img: newUser.img,
             cartList: [],
             wishList: [],
+            role: 'guest'
           });
       })
       .then(() => {

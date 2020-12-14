@@ -1,36 +1,43 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import cartIcon from '../../icons/online-shop.png';
-import wishlistIcon from '../../icons/favorite.png';
+import { NavLink, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signOut } from '../../store/actions/authActions';
 
 const SignedInNav = (props) => {
+  let history = useHistory();
   return (
     <>
       <li>
         <NavLink to="/cart">
-          <i class="material-icons">add_shopping_cart</i>
+          <i className="material-icons">add_shopping_cart</i>
         </NavLink>
       </li>
       <li>
-        <NavLink exact to="/wishes">
-          <i class="material-icons">favorite</i>
+        <NavLink to="/wishes">
+          <i className="material-icons">favorite</i>
         </NavLink>
       </li>
       <li>
         <NavLink to="/profile">Profile</NavLink>
       </li>
+      {props.profile && ((props.profile.role === 'moderator') || (props.profile.role === 'God')) ? <li><NavLink to="/create">New pillow</NavLink></li> : ''}
       <li>
-        <a onClick={props.signOut}>Log Out</a>
+        <a onClick={() => {props.signOut(); history.push('/')}}>Log Out</a>
       </li>
     </>
   );
 };
+
+const mapStateToProps = (state) => {
+  return {
+    profile: state.firebase.profile,
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     signOut: () => dispatch(signOut()),
   };
 };
 
-export default connect(null, mapDispatchToProps)(SignedInNav);
+export default connect(mapStateToProps, mapDispatchToProps)(SignedInNav);

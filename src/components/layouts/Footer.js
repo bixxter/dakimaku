@@ -7,28 +7,40 @@ export default class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col l6 s12">
-              <h5 className="white-text dokiFont">Dokimaku</h5>
+              <h2 className="white-text dokiFont">Dakimaku</h2>
               <p className="grey-text text-lighten-4">
-                Here you can find more information about us.
+                <p>Our adress: Rozybakiev 227</p>
+                <p>Shop location address - Rozybakiev 227</p>
+                <p>Shop contacts</p>
+                <p>E-mails</p>
+                <p>Gmail: ​dakimaku.almaty@gmail.com</p>
+                <p>Mail.ru: dakimaku.almaty@mail.ru</p>
+                <p>Phone numbers</p>
+                <p>+7 707 899 898 34 - Delivery stuff</p>
+                <p>+7 707 999 989 43 - Technical issues solve stuff</p>
               </p>
             </div>
-            <div className="col l4 offset-l2 s12">
-              <h5 className="white-text">Social networks</h5>
+            <div className="col l4 s12">
+              <h5 className="white-text">Links</h5>
               <ul>
+                <li><a className="grey-text text-lighten-3" href="#!">Instagram : @dakimaku.almaty</a></li>
                 <li>
                   <a className="grey-text text-lighten-3" href="#!">
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a className="grey-text text-lighten-3" href="#!">
-                    VK
+                  VK:  @dakimaku.almaty
                   </a>
                 </li>
                 <li>
                   <a className="grey-text text-lighten-3" href="#!">
                     Facebook
                   </a>
+                </li>
+                <li>
+                  <a className="grey-text text-lighten-3" href="#!">
+                  Telegram :  @dakimaku.almaty
+                  </a>
+                </li>
+                <li>
+                  <a className="grey-text text-lighten-3" href="mailto:dakimaku.almaty@gmail.com">dakimaku.almaty@gmail.com</a>
                 </li>
               </ul>
             </div>

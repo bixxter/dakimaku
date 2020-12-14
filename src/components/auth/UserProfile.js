@@ -18,11 +18,12 @@ function UserProfile(props) {
           <p>
             Email Verifcation:{' '}
             {auth.emailVerified ? (
-              <p className="light-green-text text-accent-4">Email verified</p>
+              <span className="light-green-text text-accent-4">Email verified</span>
             ) : (
-              <p className="red-text text-accent-4">Not verified</p>
+              <span className="red-text text-accent-4">Not verified</span>
             )}
           </p>
+          <p>Your role: {profile.role === 'God' ? <h1 className="dokiFont amber-text text-darken-3 center" >MEIN LIEBEN, GOTT!</h1> : profile.role }</p>
         </div>
       </div>
     </div>

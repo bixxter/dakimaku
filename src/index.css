@@ -75,10 +75,13 @@ main {
   background: var(--purple);
   color: #fff;
 }
-.profileCard {
-  width: 50vw;
+.profileCard{
   margin: 2rem auto;
+  max-width: 600px;
 }
+/* .profileCard img{
+  
+} */
 .centr {
   margin: 10vh auto;
   padding: 1em;
@@ -146,6 +149,14 @@ main {
   display: inline-block;
   height: 100%;
 }
+.formForm1{
+  background-color: #fff;
+  padding: 2rem;
+}
+.sldr img{
+  border-radius: 3px;
+}
+
 @media screen and (max-width: 750px) {
   .cards1 {
     column-gap: 0px;

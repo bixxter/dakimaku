@@ -8,11 +8,12 @@ import SignUp from './components/auth/SignUp';
 import ProjectCreate from './components/projects/ProjectCreate';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
+import Contact from './components/layouts/Contact';
 import AboutUs from './components/about/AboutUs';
-import Wishes from './components/baskets/Wishes';
+import Wishes from './components/caskets/Wishes';
 import UserProfile from './components/auth/UserProfile';
 import MainPage from './components/main/MainPage';
-import Cart from './components/baskets/Cart';
+import Cart from './components/caskets/Cart';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path="/project/:id" component={ProjectDetails} />
             <Route path="/create" component={ProjectCreate} />
             <Route path="/about" component={AboutUs} />
+            <Route path="/contact" component={Contact} />
             <Route path="/cart" component={Cart} />
             <Route path="/wishes" component={Wishes} />
             <Route path="/signin" component={SignIn} />
